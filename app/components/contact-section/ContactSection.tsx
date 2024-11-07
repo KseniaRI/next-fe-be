@@ -9,7 +9,7 @@ export default function ContactSection() {
         <StyledSection $background="#f5f5f5">
             <StyledContainer>
                 <ContactSectionWrap>
-                    <StyledTitle>Less important title</StyledTitle>
+                    <StyledTitle as="h3">Less important title</StyledTitle>
                     <ContactBtn />
                 </ContactSectionWrap>
             </StyledContainer>

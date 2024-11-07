@@ -11,7 +11,7 @@ export default function ListSection() {
         <StyledSection $background="#fff">
             <StyledContainer>
                 <ListWrap>
-                    <StyledTitle>Also very important title</StyledTitle>
+                    <StyledTitle as="h2">Also very important title</StyledTitle>
                     <ItemsList />
                     <ContactBtn />
                 </ListWrap>

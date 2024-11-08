@@ -1,13 +1,12 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
-import { FormInstance, Result } from 'antd';
-import { HomeOutlined } from '@ant-design/icons';
+import { FormInstance } from 'antd';
 import ContactForm from './components/ContactForm';
 import { ContactsWrap } from './components/Contacts.styled';
 import { StyledContainer, StyledSection } from '@/components/shared.styled';
 import { FormValues } from '@/types';
+import Feedback from './components/Feedback';
 
 export default function Contacts() {
     const [responseMessage, setResponseMessage] = useState('');
@@ -31,19 +30,11 @@ export default function Contacts() {
     };
 
     const pageContent = responseMessage ? (
-        <Result
-            status="success"
-            title={responseMessage}
-            extra={[
-                <Link key="home" href="/">
-                    <HomeOutlined />
-                    <p>Go to the home page</p>
-                </Link>,
-            ]}
-        />
+        <Feedback responseMessage={responseMessage} />
     ) : (
         <ContactForm onSubmit={onSubmit} />
     );
+
     return (
         <main>
             <StyledSection $background="#f5f5f5">

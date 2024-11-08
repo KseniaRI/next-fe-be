@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Button, FormInstance, Result } from 'antd';
+import { FormInstance, Result } from 'antd';
+import { HomeOutlined } from '@ant-design/icons';
 import ContactForm from './components/ContactForm';
 import { ContactsWrap } from './components/Contacts.styled';
 import { StyledContainer, StyledSection } from '@/components/shared.styled';
@@ -35,9 +36,8 @@ export default function Contacts() {
             title={responseMessage}
             extra={[
                 <Link key="home" href="/">
-                    <Button color="default" variant="solid">
-                        Go to the home page
-                    </Button>
+                    <HomeOutlined />
+                    <p>Go to the home page</p>
                 </Link>,
             ]}
         />
